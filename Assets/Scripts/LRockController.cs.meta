@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cfd244eb610e52046a1410ec1c32e943
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Srock: {fileID: 5594860419545865259, guid: a553c229a3e03e043a92d04a8f9b9fd0, type: 3}
+  - Explosion: {fileID: 2912766705672008179, guid: e5f58e4d58acf014b87cd474758bea4b,
+      type: 3}
+  - ExplosionSound: {fileID: 8300000, guid: e9ec6c0a272dae04ea41a6c08c101e7e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

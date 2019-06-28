@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fbe329e9cd8c20f409a4f8ff72de6647
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - LRock: {fileID: 1524923066340595230, guid: 193e361e4c8e1ef4e9e7fe5701a1f016, type: 3}
+  - Player: {fileID: 5246566971608121180, guid: bc0d43ca2d4aee24094e23ae3435ced9,
+      type: 3}
+  - Ship: {fileID: 7195474026144119769, guid: 5863ec9c102648441b4cc4849d63cf3f, type: 3}
+  - ScoreText: {instanceID: 0}
+  - LivesText: {instanceID: 0}
+  - WaveText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
