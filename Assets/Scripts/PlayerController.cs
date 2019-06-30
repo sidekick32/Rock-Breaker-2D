@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     float thrustForce = 3f;
     public Transform gun;
     public GameObject Explosion;
+    //public AudioClip Explode;
     private AudioSource Sound;
     void Start()
     {
@@ -55,13 +56,22 @@ public class PlayerController : MonoBehaviour
             
             GameController.instance.PlayerDead = true;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             if(GameController.instance.lives > 0)
             {
                 GameController.instance.lives -= 1;
             }
             GameController.instance.UpDateLives = true;
-            Destroy(gameObject);
+            StartCoroutine("PlaySoundAndDestroyAfterwards");
+            
         }
+    }
+    private IEnumerator PlaySoundAndDestroyAfterwards()
+    {
+        Sound.Play();
+        while(Sound.isPlaying)
+            {
+            yield return null;
+            }
+        Destroy(gameObject);
     }
 }

@@ -6,6 +6,7 @@ public class PGunControl : MonoBehaviour
 {
     private AudioSource Sound;
     public GameObject bullet;
+    public AudioClip GunSound;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class PGunControl : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bullet, transform.position, transform.rotation);
-            Sound.Play();
+            Sound.PlayOneShot(GunSound,0.75f);
         }
     }
 }

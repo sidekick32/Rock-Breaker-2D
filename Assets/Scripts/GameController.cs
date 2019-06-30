@@ -28,8 +28,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        
         //singleton pattern allows only 1 gamemanager
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(gameObject);
         }
@@ -37,7 +38,9 @@ public class GameController : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            
         }
+        
     }
 
     // Update is called once per frame
@@ -45,8 +48,9 @@ public class GameController : MonoBehaviour
     {
         if(NewGame)
         {
-            StartGame();
             NewGame = false;
+            StartGame();
+           
         }
         if(UpdatePoints)
         {
@@ -86,6 +90,7 @@ public class GameController : MonoBehaviour
         }
         if(PlayerDead && lives < 1)
         {
+            
             SceneManager.LoadScene("GameOver");
         }
         
@@ -93,10 +98,16 @@ public class GameController : MonoBehaviour
     }
     void StartGame()
     {
+        UpdatePoints = false;
         PlayerDead = false;
+        UpDateLives = false;
+        ShipPoints = 0;
+        ExtraLifeCounter = 0;
         lives = 3;
         wave = 1;
         score = 0;
+        points = 0;
+        LrocksCount = 6;
         ScoreText.text = "Score  " + score;
         LivesText.text = "Lives  " + lives;
         WaveText.text = "Wave  " + wave;

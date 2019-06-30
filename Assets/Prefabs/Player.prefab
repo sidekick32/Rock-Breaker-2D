@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3731678458531510881, guid: d831627b1efee9e4db5e4cfd5b3835ea, type: 3}
+  GunSound: {fileID: 8300000, guid: 7d21295a2a65dcc4da16ae2d966efd89, type: 3}
 --- !u!1 &5246566971608121180
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,9 +277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 5246566970756632303}
-  bullet: {fileID: 3731678458531510881, guid: d831627b1efee9e4db5e4cfd5b3835ea, type: 3}
   Explosion: {fileID: 2912766705672008179, guid: e5f58e4d58acf014b87cd474758bea4b,
     type: 3}
+  Explode: {fileID: 8300000, guid: e9ec6c0a272dae04ea41a6c08c101e7e, type: 3}
 --- !u!114 &7616405498975436098
 MonoBehaviour:
   m_ObjectHideFlags: 0

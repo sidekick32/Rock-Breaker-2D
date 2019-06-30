@@ -16,6 +16,7 @@ public class ShipController : MonoBehaviour
         Shiprb2d = GetComponent<Rigidbody2D>();
         Shiprb2d.AddForce(transform.right * -50f);
         Sound = GetComponent<AudioSource>();
+     
         
     }
 
@@ -27,11 +28,11 @@ public class ShipController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
-        
+        Sound.Play();
 
-        
-            
+
+
+
     }
 
     
@@ -44,7 +45,6 @@ public class ShipController : MonoBehaviour
             GameController.instance.ExtraLifeCounter += 100;
             GameController.instance.UpdatePoints = true;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             Destroy(gameObject);
 
         }

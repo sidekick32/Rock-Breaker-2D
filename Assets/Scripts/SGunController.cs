@@ -7,6 +7,7 @@ public class SGunController : MonoBehaviour
     private bool CanDrop = true;
     public GameObject Bomb;
     private AudioSource Sound;
+    
     // Start is called before the first frame update
     void Start()
     {

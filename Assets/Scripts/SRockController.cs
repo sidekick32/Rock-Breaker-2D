@@ -6,13 +6,12 @@ public class SRockController : MonoBehaviour
 {
     Rigidbody2D SRock;
     public GameObject Explosion;
-    private AudioSource Sound;
+    //private AudioSource Sound;
     // Start is called before the first frame update
     void Start()
     {
         SRock = GetComponent<Rigidbody2D>();
         SRock.AddForce(transform.up * Random.Range(-50f, 150f));
-        Sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +30,6 @@ public class SRockController : MonoBehaviour
             GameController.instance.ExtraLifeCounter += 100;
             GameController.instance.UpdatePoints = true;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             Destroy(gameObject);
         }
         if(col.gameObject.tag == "Player")
@@ -41,8 +39,8 @@ public class SRockController : MonoBehaviour
             GameController.instance.ExtraLifeCounter += 100;
             GameController.instance.UpdatePoints = true;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             Destroy(gameObject);
         }
     }
+    
 }

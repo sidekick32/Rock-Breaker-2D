@@ -6,7 +6,6 @@ public class LRockController : MonoBehaviour
 {
     public GameObject Srock;
     public GameObject Explosion;
-    //public AudioClip ExplosionSound;
     private AudioSource Sound;
     Rigidbody2D LRrb2d;
     //Start is called before the first frame update
@@ -14,8 +13,7 @@ public class LRockController : MonoBehaviour
     {
         LRrb2d = GetComponent<Rigidbody2D>();
         LRrb2d.AddForce(transform.up * Random.Range(-50.0f, 150.0f));
-        Sound = GetComponent<AudioSource>();
-        Sound.enabled = true;
+        
     }
 
     // Update is called once per frame
@@ -39,7 +37,6 @@ public class LRockController : MonoBehaviour
 
             GameController.instance.LrocksRemaining -= 1;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             Destroy(gameObject);
         }
         if(col.gameObject.tag == "Player")
@@ -56,8 +53,8 @@ public class LRockController : MonoBehaviour
 
             GameController.instance.LrocksRemaining -= 1;
             Instantiate(Explosion, transform.position, transform.rotation);
-            Sound.Play();
             Destroy(gameObject);
         }
     }
+    
 }
